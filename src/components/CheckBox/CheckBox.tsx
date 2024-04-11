@@ -15,10 +15,12 @@ const CheckBox: React.FC<CheckBoxProps> = (props: CheckBoxProps) => {
   const { onChange, className, ...checkBoxProps } = props;
 
   return (
-    <label className={cn(className, styles.root, props.disabled && styles.disabled)}>
+    <label
+      className={cn(className, styles.root, props.disabled && styles.disabled)}
+    >
       <input
         {...checkBoxProps}
-        disabled= {props.disabled}
+        disabled={props.disabled}
         className={styles.input}
         type="checkbox"
         onChange={(e) => onChange(e.target.checked)}
